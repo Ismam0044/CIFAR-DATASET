@@ -15,7 +15,7 @@ To set up the project, you need Python 3.10 or newer. First clone the repository
 
 # Training
 
-To train the model, open cifar.ipynb in Jupyter Notebook or VS Code and run the cells one by one from the top. The cells load the data, normalize it, add augmentation, build the model, and then train it. The training runs for up to 40 epochs. It stops early if the accuracy stops going up, and it lowers the learning rate when progress slows down. Training is faster on a GPU, so a machine with a GPU is better if you have one, but it also works on a normal CPU.
+To train the model, open cifar.ipynb in Jupyter Notebook or VS Code and run the cells one by one from the top. The cells load the data, normalize it, add augmentation, build the model, and then train it. The training runs for up to 40 epochs. It stops early if the accuracy stops going up, and it lowers the learning rate when progress slows down. Training is faster on a GPU so a machine with a GPU is better if you have one but it also works on a normal CPU.
 
 # Model
 
@@ -23,12 +23,28 @@ The model is a CNN built from scratch. It has three blocks of convolution layers
 
 # Performance Results
 
-The model reaches about 82 percent accuracy on the test set, and the precision, recall, and f1-score are all around 0.82 across the ten classes. The notebook also shows a confusion matrix that shows which classes the model mixes up, along with accuracy and loss curves for both training and validation. The training and validation lines stay close together, which shows the model is not overfitting.
+The model reaches about 82 percent accuracy on the test set. The precision, recall, and f1-score for each class are shown below.
 
+| Class      | Precision | Recall | F1-score |
+|------------|-----------|--------|----------|
+| airplane   | 0.81      | 0.86   | 0.83     |
+| automobile | 0.90      | 0.93   | 0.91     |
+| bird       | 0.77      | 0.73   | 0.75     |
+| cat        | 0.68      | 0.63   | 0.66     |
+| deer       | 0.80      | 0.81   | 0.80     |
+| dog        | 0.80      | 0.69   | 0.74     |
+| frog       | 0.79      | 0.90   | 0.84     |
+| horse      | 0.85      | 0.85   | 0.85     |
+| ship       | 0.92      | 0.88   | 0.90     |
+| truck      | 0.85      | 0.90   | 0.87     |
+
+The overall accuracy is 0.82. The macro average and weighted average are both 0.82 for precision, recall, and f1-score.
+
+The automobile, ship, and truck classes score the highest, while the cat and dog classes are the hardest for the model. This is normal, because cats and dogs look similar at the small 32 by 32 size and are easy to mix up. The notebook also shows a confusion matrix and the training and validation curves. The training and validation lines stay close together which shows the model is not overfitting.
 # Prediction App
 
-The notebook has an upload button near the end. When you run that cell, an upload button shows up. You click it, pick an image from your computer, and the model predicts the class and shows how sure it is. The model was trained on small 32 by 32 images, so it works best on simple, clear pictures of one object.
+The notebook has an upload button near the end. When you run that cell, an upload button shows up. You click it, pick an image from your computer, and the model predicts the class and shows how sure it is. The model was trained on small 32 by 32 images, so it works best on simple clear pictures of one object.
 
 # Files
 
-The repository holds cifar.ipynb, which is the full project with the data, model, training, results, and the prediction app. It also holds the training and validation graph and a gitignore file that keeps large and temporary files out of the repository. The trained model file and the virtual environment are not stored in the repository, because the model is created again when you run the training cells.
+The repository holds cifar.ipynb, which is the full project with the data, model, training, results, and the prediction application. 
