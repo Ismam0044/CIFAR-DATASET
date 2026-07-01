@@ -3,6 +3,7 @@
 # About the Project
 
 This project trains a convolutional neural network to sort images from the CIFAR-10 dataset into ten classes. The classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck. The trained model reaches about 82 percent accuracy on the test set. The project also includes a small app where you can upload your own image and get a prediction. Everything is kept in one notebook file called cifar.ipynb.
+Source Code : https://github.com/Ismam0044/CIFAR-DATASET/blob/main/cifar.ipynb
 
 # Dataset
 
