@@ -9,13 +9,13 @@ Source Code : https://github.com/Ismam0044/CIFAR-DATASET/blob/main/cifar.ipynb
 
 CIFAR-10 has 60,000 colour images, and each one is 32 by 32 pixels. There are 50,000 images for training and 10,000 for testing. The dataset loads on its own through TensorFlow, so you do not need to download it by hand.
 
-# Setup
+# Setup instructions
 
-To set up the project, you need Python 3.10 or newer. First clone the repository with git clone https://github.com/Ismam0044/CIFAR-DATASET.git and move into the folder. Then install the packages the project needs by running pip install tensorflow numpy matplotlib scikit-learn seaborn ipywidgets pillow. That is all the setup you need. The dataset downloads by itself the first time you run the notebook.
+To set up the project, you need Python 3.10 or newer. First, clone the repository with git clone https://github.com/Ismam0044/CIFAR-DATASET.git and move into the folder. Then install the packages the project needs by running pip install tensorflow numpy matplotlib scikit-learn seaborn ipywidgets pillow. That is all the setup you need. The dataset downloads by itself the first time you run the notebook.
 
-# Training
+# Training instructions
 
-To train the model, open cifar.ipynb in Jupyter Notebook or VS Code and run the cells one by one from the top. The cells load the data, normalize it, add augmentation, build the model, and then train it. The training runs for up to 40 epochs. It stops early if the accuracy stops going up, and it lowers the learning rate when progress slows down. Training is faster on a GPU so a machine with a GPU is better if you have one but it also works on a normal CPU.
+To train the model, open cifar.ipynb in Jupyter Notebook or VS Code and run the cells one by one from the top. The cells load the data, normalize it, add augmentation, build the model, and then train it. The training runs for up to 40 epochs. It stops early if the accuracy stops going up and it lowers the learning rate when progress slows down. Training is faster on a GPU so a machine with a GPU is better if you have one but it also works on a normal CPU.
 
 # Model
 
